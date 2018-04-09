@@ -26,10 +26,10 @@ export class IndexPattern {
 
     var intervalInfo = intervalMap[this.interval];
     var start = moment(from)
-      .utc()
+      .utcOffset(480)
       .startOf(intervalInfo.startOf);
     var endEpoch = moment(to)
-      .utc()
+      .utcOffset(480)
       .startOf(intervalInfo.startOf)
       .valueOf();
     var indexList = [];
